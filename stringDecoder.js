@@ -24,8 +24,10 @@
 function decoder (code) {
     let decodedStr = '';
     for (let i = 0; i < code.length; i++) {
-        i += parseInt(code[i]) + 1;
+        i += Number(code[i]) + 1;
         decodedStr += code[i];
     }
     return decodedStr;
 }
+
+console.log(decoder('0h2xce5ngbrdy'));
